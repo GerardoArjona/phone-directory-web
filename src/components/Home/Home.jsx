@@ -69,7 +69,7 @@ function Home() {
                         <Th className="users-cels-header mobile-user-name"><i className="fas fa-signature"></i> Name</Th>
                         <Th className="users-cels-header"><i className="fas fa-phone"></i> Number</Th>
                         <Th className="users-cels-header"><i className="fas fa-home"></i> Address</Th>
-                        <Th className="users-cels-header"><i className="fas fa-home"></i> Actions</Th>
+                        <Th className="users-cels-header"><i className="fas fa-users-cog"></i> Actions</Th>
                         </Tr>
                     </Thead>
                     <Tbody>

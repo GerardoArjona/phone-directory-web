@@ -82,7 +82,7 @@ function EditContact({editing, cancelEdition, contact, getUsers}) {
         <React.Fragment>
             <ReactNotification />
             <Modal isOpen={editing} toggle={cancelEdition} >
-                    <ModalHeader toggle={cancelEdition} className="delete-modal-header">Warning!</ModalHeader>
+                    <ModalHeader toggle={cancelEdition} className="edit-modal-header">Edit contact</ModalHeader>
                     <ModalBody>
                     <form>
                         <div className="row justify-content-center mt-2">
