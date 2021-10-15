@@ -15,7 +15,7 @@ function Nav() {
 
 	const backToHome = () =>{
 		setToggle(false)
-		history.push(`/`)
+		history.push(`/login`)
 	}
 
 	return (
@@ -31,7 +31,8 @@ function Nav() {
 						{
 							isLoggedIn() ?
 								<React.Fragment>
-									<a href="/#" className="nav-link" onClick={() => logout(backToHome)}><li className="nav-item "><i className="fas fa-user-plus"></i> Log Out</li></a>
+									<NavLink to={'/new-contact'} className="nav-link" activeClassName="active" onClick={() => setToggle(false)}><li className="nav-item "><i className="fas fa-address-book"></i> New Contact</li></NavLink>
+									<a href="/#" className="nav-link" onClick={() => logout(backToHome)}><li className="nav-item "><i className="fas fa-sign-out-alt"></i> Log Out</li></a>
 								</React.Fragment>
 								:
 								<React.Fragment>
