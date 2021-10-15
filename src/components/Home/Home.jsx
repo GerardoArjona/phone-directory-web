@@ -4,6 +4,7 @@ import { getUserTok } from '../../services/auth'
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import DeleteContact from '../DeleteContact';
+import EditContact from '../EditContact';
 import '../../App.css';
 
 function Home() {
@@ -11,6 +12,8 @@ function Home() {
     const [contacts, setContacts] = useState([]);
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
     const [toDeleteContact, setToDeleteContact] = useState('');
+    const [toEditContact, setToEditContact] = useState({});
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
     const getUsers = () =>{
         let tok = getUserTok()
@@ -37,7 +40,13 @@ function Home() {
     }, []);
     
     const editContact = (event, index) => {
+        setIsEditModalOpen(true)
+        setToEditContact(contacts[index]);
+    }
 
+    const cancelEdition = () => {
+        setIsEditModalOpen(false);
+        setToEditContact({});
     }
 
     const deleteContact = (event, index) => {
@@ -45,7 +54,7 @@ function Home() {
         setToDeleteContact(contacts[index])
     }
 
-    const cancelDeletion = (event, index) => {
+    const cancelDeletion = () => {
         setIsDeleteModalOpen(false)
         setToDeleteContact('')
     }
@@ -71,7 +80,7 @@ function Home() {
                                     <Td className="user-cels">{contact.number}</Td>
                                     <Td className="user-cels">{contact.addressLines.map(address=> `${address} \n`)}</Td>
                                     <Td className="user-cels">
-                                        <button className="btn btn-save mt-2"  type="button"><i className="fas fa-pencil-alt"></i> Edit</button>
+                                        <button className="btn btn-save mt-2"  type="button" onClick={e => editContact(e, index)}><i className="fas fa-pencil-alt"></i> Edit</button>
                                         <button className="btn btn-save mt-2"  type="button" onClick={e => deleteContact(e, index)}><i className="fas fa-trash"></i> Delete</button>
                                     </Td>
                                 </Tr>
@@ -83,6 +92,7 @@ function Home() {
                     <h1>No contacts registered...</h1>
             }
             {isDeleteModalOpen ? <DeleteContact deleting={isDeleteModalOpen} cancelDeletion={cancelDeletion} contact={toDeleteContact} getUsers={getUsers}/>: <React.Fragment></React.Fragment>}
+            {isEditModalOpen ? <EditContact editing={isEditModalOpen} cancelEdition={cancelEdition} contact={toEditContact} getUsers={getUsers}/>: <React.Fragment></React.Fragment>}
         </section>
     );
 }
