@@ -1,0 +1,172 @@
+body {
+  font-family: 'Courier New', monospace !important;
+  background-color: rgb(255, 241, 205);
+}
+
+#logo{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.main-section{
+    margin-top: 65px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    height: 81vh;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+.navbar, .footer-classic{
+    background-color: #FFB703;
+    color: #023047;
+}
+
+.navbar-dark .navbar-toggler{
+    color: #023047;;
+    border-color: #023047;;
+    border: 1.5px solid;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-item {
+    margin-right: 1rem;
+    font-weight: bold;
+    font-size: 22px;
+    color: #023047;
+}
+
+.nav-link.active {
+    color: #023047;
+    border-bottom: solid 4px #023047;
+}
+
+.welcome-title{
+    font-size: 5rem;
+}
+
+.description-text{
+    font-size: 3rem;
+}
+
+.users-cels-header{
+    text-align: center;
+    background-color: #023047;
+	color: #fff;
+	border: solid 1px #023047;
+	border-width: 1px;
+    font-size: 1.25rem;
+}
+
+.user-cels{
+    text-align: center;
+    border: solid 1px #023047;
+    border-width: 1px;
+    font-size: 1rem;
+}
+
+.user-cels a{
+    color: #023047;
+}
+
+.user-cels a:hover{
+    text-decoration: none;
+}
+
+.user-name-cel:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.signup-text, .card-body{
+    color: #023047;
+}
+
+.btn-save{
+    background-color: #023047;
+    color: #fff;
+}
+
+.btn-save:hover{
+    background-color: rgb(255, 154, 255);
+    color: #023047;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card{
+    border-color: #023047;
+}
+
+.card #logo{
+    width: 6rem;
+    height: 6rem;
+}
+
+.btn-delete{
+    background-color: #023047;
+    color: #fff;
+}
+
+.btn-delete:hover{
+    background-color: rgb(241, 64, 64);
+    color: #023047;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.btn-yes{
+    background-color: #023047;
+    color: #fff;
+}
+
+.btn-yes:hover{
+    background-color: rgb(67, 200, 44);
+    color: #023047;
+}
+
+.delete-modal-header{
+    background-color: rgb(241, 64, 64);
+    color: #023047;
+}
+
+.modal-title, .modal-body{
+    font-weight: bold;
+    color: #023047;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 750px) {
+	.mobile-user-name{
+        background-color: #023047;
+        color: #fff;
+    }
+
+    .user-cels a{
+        color: #fff;
+    }
+
+    .btn-delete{
+        background-color: rgb(241, 64, 64);
+        color: #023047;
+    }
+    
+    .btn-yes{
+        background-color: rgb(67, 200, 44);
+        color: #023047;
+    }
+
+    #edit-button{
+        margin-bottom: 3.5%;
+    }
+
+}
